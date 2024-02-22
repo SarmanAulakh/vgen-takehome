@@ -61,7 +61,7 @@ const Todos = () => {
         <div className="content">
           <h1>My Todos</h1>
           <p>sorted latest todos first</p>
-          {todos.map((todo) => {
+          {loading ? 'loading...' : todos.map((todo) => {
             const formattedDate = formatDate(todo.created);
             return (
               <ul>
